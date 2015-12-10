@@ -38,6 +38,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author mminella
+ * nagase
  */
 public class JobLauncherTestUtilsTests {
 
