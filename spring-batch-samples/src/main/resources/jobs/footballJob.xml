@@ -13,13 +13,15 @@
 	                   commit-interval="${job.commit.interval}" />
 			</tasklet>
 		</step>
-		<step id="gameLoad" next="playerSummarization">
+	
+		<step id="playerSummarization" parent="summarizationStep" />
+		
+			<step id="gameLoad" next="playerSummarization">
 			<tasklet>
 				<chunk reader="gameFileItemReader" writer="gameWriter"
 	                   commit-interval="${job.commit.interval}" />
 			</tasklet>
 		</step>
-		<step id="playerSummarization" parent="summarizationStep" />
 	</job>
 
 	<step id="summarizationStep" xmlns="http://www.springframework.org/schema/batch">
